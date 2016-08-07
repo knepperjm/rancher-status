@@ -1,6 +1,9 @@
 # Rancher-Status-Page:
 
-* The purpose of this repo is to house a container that display the current status of a given rancher environment.
+* The purpose of this repo is to house a container that runs a simple NodeJS application in order to display a nice, simple UI showing 
+  the latest deployed DockerHub tags per stack / container in each respective environment you've created in your Rancher cluster.
+* The NodeJS simply executes a shell script (`data.sh`), and serves up a dynamically generated index page (`index.html`).
+* This container must run in rancher in order for the `curl` calls against the Rancher metadata API to work.
 * This is important, because it allows to get a high-level view of currently deployed docker tags for each respective stack.
 
 ## Notes:
